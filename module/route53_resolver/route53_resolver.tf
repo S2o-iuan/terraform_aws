@@ -14,3 +14,9 @@ resource "aws_route53_resolver_rule" "route53_resolver_rule" {
     Name        = var.resolver_rule_name
   }
 }
+
+resource "aws_route53_resolver_rule_association" "route53_resolver_rule_association" {
+  for_each         = var.vpc_id
+  resolver_rule_id = aws_route53_resolver_rule.route53_resolver_rule.id
+  vpc_id           = each.value[0]
+}

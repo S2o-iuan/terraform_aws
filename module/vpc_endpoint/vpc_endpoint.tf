@@ -6,7 +6,7 @@ data "aws_vpc" "vpc_endpoint_vpc" {
 }
 #subnets取得
 data "aws_subnets" "vpc_endpoint_subnets" {
-  count = var.vpc_endpoint_type != [] ? 1 : 0
+  count = var.vpc_endpoint_type == "Interface" ? 1 : 0
   filter {
     name   = "tag:Name"
     values = var.vpc_endpoint_subnets

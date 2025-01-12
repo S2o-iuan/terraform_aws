@@ -48,10 +48,14 @@ resource "aws_lb" "this" {
     subnet_id     = data.aws_subnet.mapping1
     allocation_id = var.eip_mapping1 != null ? data.aws_eip.eip1[0].id : null
   }
-  subnet_mapping {
-    subnet_id     = var.subnet_mapping2 != null ? data.aws_subnet.mapping2[0].id : null
-    allocation_id = var.eip_mapping2 != null ? data.aws_eip.eip2[0].id : null
+  dynamic "subnet_mapping" {
+    for_each = var.subnet_mapping2 != null ? [1] : []
+    content {
+      subnet_id     = data.aws_subnet.mapping2[0].id
+      allocation_id = var.eip_mapping2 != null ? data.aws_eip.eip2[0].id : null
+    }
   }
+
   tags = {
     Name          = var.lb_name
     Account       = var.lb_account

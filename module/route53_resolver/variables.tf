@@ -5,3 +5,4 @@ variable "target_ip" {}
 variable "rule_type" {
     default = "FORWARD"
 }
+variable "vpc_id" {}
