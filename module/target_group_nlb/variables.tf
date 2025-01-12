@@ -1,0 +1,23 @@
+variable "tg_target_type" {}
+variable "tg_name" {}
+variable "tg_port" {}
+variable "tg_protocol" {}
+variable "tg_protocol_version" {}
+variable "tg_ip_address_type" {}
+variable "vpc_name" {}
+variable "tg_health_check_protocol" {}
+variable "tg_health_check_path" {}
+variable "tg_health_check_port" {}
+variable "tg_health_check_healthy" {}
+variable "tg_health_check_unhealth" {}
+variable "tg_health_check_timeout" {}
+variable "tg_health_check_interval" {}
+variable "tg_health_check_matcher" {}
+variable "tg_account" {}
+variable "tg_managedby" {}
+variable "tg_env" {}
+variable "tg_mapmigrated" {}
+variable "tg_attachments" {}
+variable "tg_attachments_ip" {
+    default = {}
+}

@@ -1,0 +1,12 @@
+variable "data_subnet_name_list" {}
+variable "lb_name" {}          
+variable "lb_type" {}              
+variable "lb_account" {}           
+variable "lb_enviroment" {}        
+variable "lb_managedby" {}         
+variable "lb_map_migrated" {}      
+variable "lb_defalt_listener" {}  
+variable "gwlbe_name" {}  
+variable "gwlbe_allowed_principals_1" {}  
+variable "gwlbe_allowed_principals_2" {}  
+variable "aws_vpc_endpoint_id" {}  

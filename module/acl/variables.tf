@@ -1,0 +1,9 @@
+variable "acl_name" {}
+variable "acl_vpc" {}
+variable "acl_subnets" {}
+variable "acl_ingress_rule" {}
+variable "acl_egress_rule" {}
+variable "acl_environment" {}
+variable "acl_account" {}
+variable "acl_managedby" {}
+variable "acl_mapmigrated" {}
