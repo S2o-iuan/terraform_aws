@@ -1,3 +1,4 @@
+#删除
 output "dns_name" {
   value = aws_vpc_endpoint.vpc_interface_endpoint[0].dns_entry[0].dns_name
 }
